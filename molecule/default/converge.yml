@@ -1,0 +1,12 @@
+---
+- name: Converge
+  hosts: all
+  become: yes
+  tasks:
+    - name: "Install openssh-server"
+      yum:
+        name: openssh-server
+
+    - name: "Include ssh-hbauth-server"
+      include_role:
+        name: "ssh-hbauth-server"

@@ -1,0 +1,17 @@
+---
+
+- name: ensure SSHD is using UseDNS directive
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^UseDNS'
+    line: 'UseDNS yes'
+  notify: restart sshd
+  tags: hba
+
+- name: ensure SSHD has host based authentication enabled
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^HostbasedAuthentication'
+    line: 'HostbasedAuthentication yes'
+  notify: restart sshd
+  tags: hba

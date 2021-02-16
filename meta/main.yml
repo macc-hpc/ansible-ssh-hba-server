@@ -1,0 +1,17 @@
+---
+
+galaxy_info:
+  author: Rui Ribeiro
+  description: OpenSSH Host Based Authentication Server
+  company: MACC
+  license: MIT
+  min_ansible_version: 2.9
+  platforms:
+    - name: CentOS
+      versions:
+        - all
+  galaxy_tags:
+    - security
+    - ssh
+dependencies:
+  - ssh-hbauth-client
