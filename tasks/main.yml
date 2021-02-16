@@ -15,3 +15,15 @@
     line: 'HostbasedAuthentication yes'
   notify: restart sshd
   tags: hba
+
+- name: copy ssh_known_hosts
+  copy:
+    src: "{{hba_ssh_known_hosts}}"
+    dest: /etc/ssh/ssh_known_hosts
+  tags: hba
+
+- name: copy shosts.equiv
+  copy:
+    src: "{{hba_shosts_equiv}}"
+    dest: /etc/ssh/shosts.equiv
+  tags: hba

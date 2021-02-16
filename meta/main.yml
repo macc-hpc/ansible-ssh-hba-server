@@ -13,5 +13,4 @@ galaxy_info:
   galaxy_tags:
     - security
     - ssh
-dependencies:
-  - ssh-hbauth-client
+dependencies: []
