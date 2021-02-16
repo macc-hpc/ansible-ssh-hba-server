@@ -20,10 +20,12 @@
   copy:
     src: "{{hba_ssh_known_hosts}}"
     dest: /etc/ssh/ssh_known_hosts
+    mode: 0644
   tags: hba
 
 - name: copy shosts.equiv
   copy:
     src: "{{hba_shosts_equiv}}"
     dest: /etc/ssh/shosts.equiv
+    mode: 0644
   tags: hba
